@@ -9,24 +9,16 @@ export const ManagedSelect = () => {
   const [value, setValue] = React.useState('newest');
   return (
     <>
-      <label
-        htmlFor="filter-by"
-        style={{
-          display: 'block',
-          marginBottom: '0.5em',
-        }}
-      >
-        Filter by:
-      </label>
       <Select
         id="filter-by"
-        label="Sort"
+        label="Filter by:"
         value={value}
         onChange={(ev) => setValue(ev.target.value)}
       >
         <option value="newest">Newest Releases</option>
         <option value="price">Price</option>
         <option value="curated">Curated</option>
+         <option value="long">A really long option</option>
       </Select>
     </>
   );
